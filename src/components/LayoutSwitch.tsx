@@ -55,7 +55,7 @@ function Options({ children }: ComponentWithChildrenProps) {
           throw new Error(
             `${
               child.type.name || child.type
-            } cannot be rendered inside LayoutSwitch
+            } cannot be rendered inside LayoutSwitch.Options
             Valid Components are [${Button.name}]`
           );
         }
