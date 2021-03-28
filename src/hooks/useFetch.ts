@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState, useEffect } from 'react';
 import { API_BASE_URL } from '../constants';
 
 interface FetchResponseData<T> {
@@ -20,13 +20,11 @@ const DEFAULT_RESPONSE_STATE = {
  * @param endpoint endpoint to fetch data from.
  */
 export function useFetch<T>(endpoint: string): FetchResponseData<T> {
-  const [response, setResponse] = React.useState<Response<T>>(
-    DEFAULT_RESPONSE_STATE
-  );
-  const [error, setError] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
+  const [response, setResponse] = useState<Response<T>>(DEFAULT_RESPONSE_STATE);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  React.useEffect(() => {
+  useEffect(() => {
     let didCancelFetch = false;
 
     // Resets the loader and errors on subsequent calls
