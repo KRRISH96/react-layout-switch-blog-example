@@ -1,0 +1,74 @@
+.app {
+  .users-table-container {
+    overflow-x: auto;
+    box-shadow: var(--shadow-secondary);
+    border-radius: 0.2rem;
+    .users-table {
+      border-spacing: 0;
+      text-transform: capitalize;
+      min-width: 35rem;
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--bg-secondary);
+      th,
+      td {
+        text-align: left;
+        vertical-align: baseline;
+        padding: var(--s-1);
+        &:first-child {
+          text-align: center;
+        }
+      }
+
+      .user-name {
+        width: 14rem;
+      }
+
+      &__head {
+        background-color: var(--table-header-bg);
+      }
+
+      &__body {
+        tr:not(:last-child) {
+          border-bottom-style: groove;
+          border-width: 1px;
+          border-color: var(--color);
+        }
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      .user-name {
+        width: 12rem;
+      }
+    }
+  }
+
+  .layout-switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: var(--s-0_75);
+    .active {
+      background-color: var(--bg-invert);
+      color: var(--color-invert);
+    }
+    .layout-btn {
+      text-transform: capitalize;
+    }
+  }
+
+  .user-grid-container {
+    .user-cards__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      grid-gap: var(--s-1_25);
+      .user-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
