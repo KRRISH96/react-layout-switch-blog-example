@@ -1,7 +1,7 @@
 import React from 'react';
 import { UsersListProps } from './App';
 
-function UsersGrid({ users, activeLayout }: UsersListProps) {
+function UsersGrid({ users }: UsersListProps) {
   return (
     <div className="user-grid-container">
       <div className="user-cards__list">
@@ -18,7 +18,7 @@ function UsersGrid({ users, activeLayout }: UsersListProps) {
             </span>
           </div>
         ))}
-        {!users.length && <h3>No users matching search term....</h3>}
+        {!users.length && <h3>No users....</h3>}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { UsersListProps } from './App';
 
-function UsersTable({ users, activeLayout }: UsersListProps) {
+function UsersTable({ users }: UsersListProps) {
   return (
     <div className="users-table-container">
       <table className="users-table">
@@ -30,7 +30,7 @@ function UsersTable({ users, activeLayout }: UsersListProps) {
           ))}
           {!users.length && (
             <tr>
-              <td colSpan={4}>No users matching search term....</td>
+              <td colSpan={4}>No users....</td>
             </tr>
           )}
         </tbody>
