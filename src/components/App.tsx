@@ -37,7 +37,7 @@ function App() {
   }
 
   return (
-    <div className="container app">
+    <main className="container app">
       <h2>Users</h2>
       {loading && <h3>Loading Users...</h3>}
       {users !== null ? (
@@ -64,7 +64,7 @@ function App() {
       ) : (
         <h3>No Users Found</h3>
       )}
-    </div>
+    </main>
   );
 }
 

@@ -1,7 +1,7 @@
 .app {
   .users-table-container {
     overflow-x: auto;
-    box-shadow: var(--shadow-secondary);
+    box-shadow: var(--shadow);
     border-radius: 0.2rem;
     .users-table {
       border-spacing: 0;
@@ -9,7 +9,7 @@
       min-width: 35rem;
       width: 100%;
       border-collapse: collapse;
-      background-color: var(--bg-secondary);
+      background-color: var(--bg);
       th,
       td {
         text-align: left;
@@ -62,7 +62,7 @@
     .user-cards__list {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-      grid-gap: var(--s-1_25);
+      grid-gap: var(--s-1);
       .user-card {
         display: flex;
         flex-direction: column;
