@@ -1,4 +1,5 @@
 import React from 'react';
+import { BsTable, BsGridFill } from 'react-icons/bs';
 import { useFetch } from '../hooks/useFetch';
 import UsersTable from './UsersTable';
 import LayoutSwitch from './LayoutSwitch';
@@ -47,13 +48,13 @@ function App() {
               layoutPreference={LAYOUT_OPTIONS.table}
               title="Table Layout"
             >
-              <p>Hello Table</p>
+              <BsTable />
             </LayoutSwitch.Button>
             <LayoutSwitch.Button
               layoutPreference={LAYOUT_OPTIONS.grid}
               title="Grid Layout"
             >
-              <p>Hello Grid</p>
+              <BsGridFill />
             </LayoutSwitch.Button>
           </LayoutSwitch.Options>
           <LayoutSwitch.Content>
