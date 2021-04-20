@@ -39,7 +39,7 @@ function App() {
 
   return (
     <main className="container app">
-      <h2>Users</h2>
+      <h1>Users</h1>
       {loading && <h3>Loading Users...</h3>}
       {users !== null ? (
         <LayoutSwitch defaultLayout={LAYOUT_OPTIONS.grid}>
